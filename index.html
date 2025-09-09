@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Арома Гаромния</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: #f7f3ef;
+      color: #2b2a28;
+    }
+    header {
+      background: #fffdfa;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #e9e2db;
+    }
+    h1 {
+      font-family: 'Marcellus', serif;
+      margin: 0;
+    }
+    nav {
+      margin-top: 10px;
+    }
+    nav button {
+      margin: 5px;
+      padding: 10px 16px;
+      background: #c27052;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    nav button:hover {
+      background: #a25a40;
+    }
+    section {
+      max-width: 800px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fffdfa;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+    .hidden {
+      display: none;
+      margin-top: 10px;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #fffdfa;
+      border-top: 1px solid #e9e2db;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Арома Гаромния</h1>
+    <nav>
+      <button onclick="toggleSection('about')">О нас</button>
+      <button onclick="toggleSection('order')">Как заказать</button>
+      <button onclick="toggleSection('contacts')">Контакты</button>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Каталог</h2>
+    <ul>
+      <li>Свеча «Ваниль и табак» — 850 ₽</li>
+      <li>Свеча «Апельсин» — 790 ₽</li>
+      <li>Свеча «Хвоя» — 820 ₽</li>
+      <li>Свеча «Корица» — 790 ₽</li>
+    </ul>
+  </section>
+
+  <section id="about" class="hidden">
+    <h2>О нас</h2>
+    <div>Мы создаём свечи в самодельных гипсовых формах, каждая из которых уникальна. Наши ароматы — это уют, тепло и эстетика, которую вы приносите в свой дом.</div>
+    <div>Каждая свеча — это произведение, созданное вручную с вниманием к деталям. Мы используем натуральные компоненты и тестируем каждую партию.</div>
+  </section>
+
+  <section id="order" class="hidden">
+    <h2>Как заказать</h2>
+    <ol>
+      <li>Выберите аромат и количество</li>
+      <li>Напишите нам на почту или в Instagram</li>
+      <li>Мы пришлём QR по СБП и подтвердим заказ</li>
+      <li>Доставка по России и СНГ — 3–10 дней</li>
+    </ol>
+  </section>
+
+  <section id="contacts" class="hidden">
+    <h2>Контакты</h2>
+    <ul>
+      <li>Email: <a href="mailto:dan182003@yandex.ru">dan182003@yandex.ru</a></li>
+      <li>Instagram: <a href="https://instagram.com/d_danyaa_aa" target="_blank">@d_danyaa_aa</a></li>
+    </ul>
+    <div>Напишите нам, если хотите подобрать аромат, узнать о наличии или оформить заказ. Мы всегда на связи!</div>
+  </section>
+
+  <footer>
+    © 2025 Арома Гаромния
+  </footer>
+
+  <script>
+    function toggleSection(id) {
+      const el = document.getElementById(id);
+      el.classList.toggle('hidden');
+    }
+  </script>
+
+</body>
+</html>
